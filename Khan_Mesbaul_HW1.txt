@@ -1,0 +1,51 @@
+....F...FF........................
+
+Failures:
+
+  1) Ruby intro part 1 #max_2_sum returns the correct sum [7 points]
+     Failure/Error: expect(max_2_sum([1, -2, -3, -4, -5])).to eq(-1)
+
+       expected: -1
+            got: -9
+
+       (compared using ==)
+     # ./spec/part1_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+  2) Ruby intro part 1 #sum_to_n should be defined
+     Failure/Error: expect { sum_to_n?([1, 2, 3], 4) }.not_to raise_error
+
+       expected no Exception, got #<NoMethodError: undefined method `in?' for 3:Integer
+
+           if (digit - number).abs.in?(number_map)
+                                  ^^^^
+       Did you mean?  nil?> with backtrace:
+         # ./lib/ruby_intro.rb:42:in `block in sum_to_n?'
+         # ./lib/ruby_intro.rb:41:in `each'
+         # ./lib/ruby_intro.rb:41:in `sum_to_n?'
+         # ./spec/part1_spec.rb:46:in `block (4 levels) in <top (required)>'
+         # ./spec/part1_spec.rb:46:in `block (3 levels) in <top (required)>'
+     # ./spec/part1_spec.rb:46:in `block (3 levels) in <top (required)>'
+
+  3) Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+     Failure/Error: if (digit - number).abs.in?(number_map)
+
+     NoMethodError:
+       undefined method `in?' for 4:Integer
+
+           if (digit - number).abs.in?(number_map)
+                                  ^^^^
+       Did you mean?  nil?
+     # ./lib/ruby_intro.rb:42:in `block in sum_to_n?'
+     # ./lib/ruby_intro.rb:41:in `each'
+     # ./lib/ruby_intro.rb:41:in `sum_to_n?'
+     # ./spec/part1_spec.rb:49:in `block (3 levels) in <top (required)>'
+
+Finished in 0.08947 seconds (files took 0.45386 seconds to load)
+34 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/part1_spec.rb:29 # Ruby intro part 1 #max_2_sum returns the correct sum [7 points]
+rspec ./spec/part1_spec.rb:45 # Ruby intro part 1 #sum_to_n should be defined
+rspec ./spec/part1_spec.rb:48 # Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+
